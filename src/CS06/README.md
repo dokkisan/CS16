@@ -26,8 +26,8 @@
 - 크기: 8x8 (가로 rank x 세로 file)
 - 기능: 
   - ```...```
-  - 현재 있는 말을 확인해 흑과 백 점수 계산
-    - 색상별로 Pawn 1점, Bishop와 Knight 3점, Rook 5점, Queen은 9점
+    - 현재 있는 말을 확인해 흑과 백 점수 계산
+      - 색상별로 Pawn 1점, Bishop와 Knight 3점, Rook 5점, Queen은 9점
 
   - ```display()```
     - 모든 말의 위치를 간접적으로 알 수 있음
@@ -68,6 +68,7 @@
 - 체스말은 위치값을 Position 타입으로 가짐
   - 꼭 Position 값을 다루기 위한 데이터 구조를 별도로 만든다
   - Position은 file A~H, rank는 1~8까지 입력 가능
+  - file과 rank는 enum으로 선언
 - 체스말은 흑Black 또는 백White 둘 중에 하나여야 함
   - 상태값으로 지정한다면 생성할 때 결정하고 변경할 수 없어야 함
   - 타입으로 구분한다면 다형성으로 동작하도록 함
