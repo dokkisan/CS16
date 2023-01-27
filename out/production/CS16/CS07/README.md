@@ -16,25 +16,25 @@
   - [ ] 학습 과정 기록
 
 
-# 이론 학습
+# 1. 이론 학습
 
 parsing
 - 문서 파싱은 브라우저가 코드를 이해하고 사용할 수 있는 구조(tree)로 변환하는 것을 의미
 
-## 1. Tokenizer, Lexer, Parser
+## 1.1 Tokenizer, Lexer, Parser
 
-### 1.1. 컴파일러
+### 1.1.0 컴파일러
 - 소스코드를 기계어로 번역
 - ```구문분석``` -> 최적화 -> 코드생성 -> 링킹
   - 구문분석 과정에서 소스코드는 Tokenizer, Lexer, Parser를 차례대로 지나가며 분석 진행
 
-### 1.1. Tokenizer
+### 1.1.1 Tokenizer
 소스코드를 의미있는 단위로 쪼갬(토큰화)
 
-### 1.1. Lexer
+### 1.1.2 Lexer
 주어진 토큰의 의미 분석
 
-### 1.1. Parser
+### 1.1.3 Parser
 분석된 데이터 검증 및 AST 구조화
 
 
@@ -68,49 +68,6 @@ parsing
     - 데이터의 양이 많을 때 주로 사용
   - Java 직렬화
     - Java 시스템 간의 데이터 교환이 필요할 때 사용
-
-# 다이어그램
-# 기능 목록
-# 1. model
-## XMLTokenizer
-```XML 형식의 문자열을 토큰화하여 의미있는 단위로 가공```
-### Field
-
-### Method
-- **tokenizeBySpace**(String XMLString)
-  - 입력된 문자열을 공백을 기준으로 토큰화
-    - 공백이 없을 경우 태그 사이에 공백 삽입?
-
-## XMLLexer
-```토큰을 ```
-### Field
-- **Token**
-- 
-### Method
-- 
-
-## XMLParser
-### Field
-
-### Method
-
-
-## Token
-### Field
-
-### Method
-
-# 2. view
-## OutputView
-### Field
-
-### Method
-- **Stringfy**(boolean ?) // Validator에서 전달받을 예정
-  - 문자열 리턴
-  - boolean 값을 기준으로 "올바른 XML 형식이 아닙니다." 리턴
-
-# 3. controller
-
 
 # References
 - [컴파일러 이론] Tokenizer, Lexer, Parser
