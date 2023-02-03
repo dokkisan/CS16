@@ -1,4 +1,4 @@
-package CS09.practice;
+package CS09.practice.fp;
 
 // # 재귀
 // 재귀를 이용하면 변화가 일어나지 않고, 루프 단계마다 갱신되는 반복 변수를 제거할 수 있음

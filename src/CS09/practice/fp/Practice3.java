@@ -1,4 +1,4 @@
-package CS09.practice;
+package CS09.practice.fp;
 
 import java.util.function.DoubleUnaryOperator;
 
