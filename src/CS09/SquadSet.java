@@ -12,10 +12,8 @@ public class SquadSet {
     }
 
     public final SquadSet sum(SquadSet other) {
-        List<Integer> sumSource = Stream.concat(source.stream(), other.getSource().stream())
-                                        .distinct().collect(Collectors.toList());
-
-        return new SquadSet(sumSource);
+        return new SquadSet(Stream.concat(source.stream(), other.getSource().stream())
+                .distinct().collect(Collectors.toList()));
     }
 
 //    public final SquadSet complement(SquadSet other) {
