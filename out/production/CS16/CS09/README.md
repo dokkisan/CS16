@@ -18,4 +18,5 @@
 - 스트림 메서드로 전달하는 코드는 다른 코드와 동시에 실행하더라도 안전하게 실행될 수 있어야 함
 
 ### 방어적 복사와 Unmodifiable Collection
+// UnsupportedOperationException
 - https://tecoble.techcourse.co.kr/post/2021-04-26-defensive-copy-vs-unmodifiable/

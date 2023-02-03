@@ -16,9 +16,10 @@ public class SquadSet {
                                   .distinct().collect(Collectors.toList()));
     }
 
-//    public final SquadSet complement(SquadSet other) {
-//
-//    }
+    public final SquadSet complement(SquadSet other) {
+        return new SquadSet(source.stream().filter(source -> !other.getSource().contains(source))
+                                  .collect(Collectors.toList()));
+    }
 
     public final SquadSet intersect(SquadSet other) {
         return new SquadSet(source.stream().filter(other.getSource()::contains)
@@ -37,13 +38,15 @@ public class SquadSet {
         SquadSet setA = new SquadSet(List.of(1,2,3));
         SquadSet setB = new SquadSet(List.of(1,3));
 
-        // 합집합
+        System.out.println("A 집합 = " + Arrays.toString(setA.resultAll().toArray()));
+        System.out.println("B 집합 = " + Arrays.toString(setB.resultAll().toArray()));
+
         SquadSet sum = setA.sum(setB);
         System.out.println("합집합sum = " + Arrays.toString(sum.resultAll().toArray()));
-        // 차집합
-//        SquadSet complement = setA.complement(setB);
-//        System.out.println("차집합complement = " + Arrays.toString(complement.resultAll().toArray()));
-        // 교집합
+
+        SquadSet complement = setA.complement(setB);
+        System.out.println("차집합complement = " + Arrays.toString(complement.resultAll().toArray()));
+
         SquadSet intersect = setA.intersect(setB);
         System.out.println("교집합intersect = " + Arrays.toString(intersect.resultAll().toArray()));
     }
