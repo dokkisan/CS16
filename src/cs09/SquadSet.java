@@ -4,37 +4,44 @@ import java.util.*;
 import java.util.stream.*;
 
 public class SquadSet {
-    private List<Integer> source;
+    private final List<Integer> source;
 
-    public SquadSet() {
-
-    }
 
     public SquadSet(List<Integer> source) {
         this.source = source;
     }
 
-    // 합집합
-    public static SquadSet sum(SquadSet setA, SquadSet setB) {
-        List<Integer> sourceA = new ArrayList<>(setA.source);
-        List<Integer> sourceB = new ArrayList<>(setB.source);
+    public final SquadSet sum(SquadSet other) {
+        List<Integer> sumSource = Stream.concat(source.stream(), other.getSource().stream())
+                                        .distinct().collect(Collectors.toList());
 
-        List<Integer> sourceC = Stream.concat(sourceA.stream(), sourceB.stream())
-                                      .distinct().collect(Collectors.toList());
-
-        return new SquadSet(sourceC);
+        return new SquadSet(sumSource);
     }
 
-    public static SquadSet complement(SquadSet other) {
+//    public final SquadSet complement(SquadSet other) {
+//        List<Integer> complementSource;
+//
+//        return new SquadSet(complementSource);
+//    }
 
+    public final SquadSet intersect(SquadSet other) {
+        return new SquadSet(source.stream().filter(other.getSource()::contains)
+                                  .collect(Collectors.toList()));
+    }
 
-        return new SquadSet();
+    public List<Integer> getSource() {
+        return source;
     }
 
     public static void main(String[] args) {
         SquadSet setA = new SquadSet(List.of(1,2,3));
         SquadSet setB = new SquadSet(List.of(1,3));
 
-        SquadSet sum = sum(setA, setB);     //  합집합
+        // 합집합
+        SquadSet sum = setA.sum(setB);
+        // 차집합
+//        SquadSet complement = setA.complement(setB);
+        // 교집합
+        SquadSet intersect = setA.intersect(setB);
     }
 }
