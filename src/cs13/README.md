@@ -8,7 +8,7 @@
 - 브라우저가 HTTP 요청 메시지를 생성.
 
 #### 📌 Request Message(요청 메시지)
-![img_1.png](img_1.png)   
+![img_1.png](https://user-images.githubusercontent.com/117690393/219569653-5547aadb-90c3-443c-b865-55348025ec55.png)   
 ❕GET 메서드의 경우 메서드와 URI 만으로 웹 서버가 무엇을 할지 판단할 수 있으므로 메시지 본문에 쓰는 송신 데이터는 아무것도 없음.
 
 ### 2. 웹 서버의 IP주소를 DNS 서버에 조회
