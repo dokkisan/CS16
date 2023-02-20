@@ -1,4 +1,4 @@
-# CS13 | Docker
+# CS14 | Docker
 
 ### docker 설치
 <img width="682" alt="스크린샷 2023-02-20 오후 12 44 43" src="https://user-images.githubusercontent.com/117690393/220004894-578a55a7-f26b-48a7-b8d4-fd0f479575ab.png">
